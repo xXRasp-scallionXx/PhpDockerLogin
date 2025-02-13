@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background: lightsalmon;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.box {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.form-box {
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.form-box header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid purple;
+    margin-bottom: 10px;
+}
+
+.form-box form .input-group {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box form .input-group input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Added space after 'solid' */
+    outline: none;
+    box-sizing: border-box; /* Add this line to include padding and border in the element's total width */
+}
+
+.btn {
+    height: 35px;
+    background: rgba(76,68, 182, 0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0 10px;
+    width: 100%; /* Add this line to make the button extend to the edge */
+}
+
+.btn:hover { 
+    opacity: 0.8;
+}
+
+.submit {
+    width: 100%;
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+/* HOME PAGE */
+
+.nav {
+    background:#fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 60px;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+
+.right-links {
+    padding: 20px 10px 0px 0px;
+    display: inline-flex;
+}
+
+.right-links a {
+    margin-left: 10px; /* Add this line to create space between the logout button and the "change profile" link */
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.main-box .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@medai only screen and (max-width: 840px) {
+    .main-box .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.top .box {
+    margin: 10px 10px;
+}
+
+.bottom{
+    margin-top: 0;
+}

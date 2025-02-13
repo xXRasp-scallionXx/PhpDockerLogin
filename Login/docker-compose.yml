@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "8000:80"
+    volumes:
+      - ./www/html:/var/www/html
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USER: root
+      DATABASE_PASS: Cantbreakme777&!
+      DATABASE_NAME: login_system
+
+  db:
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: Cantbreakme777&!
+      MYSQL_DATABASE: login_system
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
